@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export type surahProps = {
   number: number;
   name: string;
@@ -24,6 +26,9 @@ export default function Surah({
         <p>{englishNameTranslation}</p>
         <p>{numberOfAyahs}</p>
         <p>{revelationType}</p>
+        <Link href={`/surah/${number}`}>
+          <button className='btn'>open</button>
+        </Link>
       </div>
     </div>
   );

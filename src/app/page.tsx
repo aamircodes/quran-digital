@@ -1,24 +1,13 @@
 import Hero from './components/Hero';
 import SurahList from './components/SurahList';
 
-async function getData() {
-  const res = await fetch('http://api.alquran.cloud/v1/surah');
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data from api');
-  }
-
-  return res.json();
-}
-
-export default async function Home() {
-  const { data } = await getData();
-
+export default function Home() {
   return (
-    <main className=''>
-      <Hero />
+    <main>
       <div className='container mx-auto'>
-        <SurahList data={data} />
+        <Hero />
+        {/* @ts-expect-error Async Server Component */}
+        <SurahList />
       </div>
     </main>
   );
