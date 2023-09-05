@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export type surahProps = {
+export type SurahProps = {
   number: number;
   name: string;
   englishName: string;
@@ -16,7 +16,7 @@ export default function Surah({
   englishNameTranslation,
   numberOfAyahs,
   revelationType,
-}: surahProps) {
+}: SurahProps) {
   return (
     <div className='card w-full bg-base-100 shadow-xl'>
       <div className='card-body'>
