@@ -1,3 +1,5 @@
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import { SurahProps } from './components/Surah';
 import SurahList from './components/SurahList';
 
@@ -20,10 +22,10 @@ export default async function Home() {
   const data = await fetchAllSurah();
 
   return (
-    <main>
-      <div className='container mx-auto'>
-        <SurahList data={data} />
-      </div>
+    <main className=''>
+      <Navbar />
+      <SurahList data={data} />
+      <Footer />
     </main>
   );
 }

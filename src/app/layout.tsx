@@ -1,7 +1,6 @@
+import ThemeProvider from './components/ThemeProvider';
 import './globals.css';
 import type { Metadata } from 'next';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: 'Quran App',
@@ -9,16 +8,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children, 
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang='en'>
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
+      <body className='bg-secondary'>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
