@@ -21,7 +21,7 @@ export default function Navbar() {
         </a>
       </div>
       <div className='flex-none'>
-        <label className='btn btn-ghost swap swap-rotate px-2'>
+        <label className='btn btn-ghost btn-circle swap swap-rotate px-2'>
           {/* this hidden checkbox controls the state */}
           <input
             type='checkbox'

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children, 
+  children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang='en'>
-      <body className='bg-secondary'>
+      <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
